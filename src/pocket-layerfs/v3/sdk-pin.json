@@ -1,0 +1,10 @@
+{
+    "repo": "Ephemeral-AI-Lab/layerfs",
+    "tag": "v1.0.0",
+    "commit": "2aaf2552ce21154928b9f9c83582e41a637f5910",
+    "version": "1.0.0",
+    "archiveSha256": "4a825aced0574358857f14abfc9c553e4f0f3cf88914de8956ac4107692535a7",
+    "sdkTreeSha256": "af80d71aa2421c9e63b1bde49788cd968d5bc677f8702c1ba57991e238d6d11e",
+    "nativeSha256": "63d366056b8c370583bddd4dba34fc186fd5a6cc3c2fe4e1c436a7c7221468a7",
+    "exclude": ["native", "UPSTREAM.json"]
+}

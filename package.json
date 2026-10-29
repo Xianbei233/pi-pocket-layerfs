@@ -1,0 +1,41 @@
+{
+    "name": "pi-pocket-layerfs",
+    "version": "0.3.0",
+    "private": true,
+    "files": [
+        "src/",
+        "service/",
+        "scripts/",
+        "docs/",
+        "test/",
+        "README.md",
+        "LICENSE",
+        "NOTICE",
+        "upstream.lock.json",
+        "config.example.json",
+        "tsconfig.json",
+        "eslint.config.mjs",
+        ".prettierrc.json",
+        ".prettierignore"
+    ],
+    "type": "module",
+    "description": "A Pi Pocket drop-in for LayerFS: read-only history and tools, an owner Configuration view with explicit save/apply, and a filtered owner-confirmed import into a new private Store.",
+    "license": "MIT",
+    "dependencies": {
+        "ignore": "7.0.8"
+    },
+    "engines": {
+        "node": ">=22.19"
+    },
+    "scripts": {
+        "check": "node scripts/check.mjs",
+        "lint": "node scripts/lint.mjs",
+        "format:check": "node scripts/format-check.mjs",
+        "test": "node scripts/test.mjs",
+        "setup": "node scripts/setup.mjs",
+        "init:synthetic": "node scripts/init-synthetic.mjs",
+        "service": "node service/main.mjs",
+        "install:dropin": "node scripts/install.mjs",
+        "uninstall:dropin": "node scripts/uninstall.mjs"
+    }
+}

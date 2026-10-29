@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "target": "ES2023",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "lib": ["ES2023"],
+        "allowJs": true,
+        "checkJs": false,
+        "noEmit": true,
+        "strict": false,
+        "noImplicitAny": false,
+        "skipLibCheck": true,
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
+        "baseUrl": ".",
+        "ignoreDeprecations": "6.0",
+        "forceConsistentCasingInFileNames": true,
+        "types": ["node"],
+        "typeRoots": ["../pi-pocket-production/node_modules/@types"],
+        "paths": {
+            "@earendil-works/pi-ai": ["../pi-pocket-production/node_modules/@earendil-works/pi-ai"],
+            "@earendil-works/pi-durable": [
+                "../pi-pocket-production/node_modules/@earendil-works/pi-durable"
+            ],
+            "@earendil-works/chord": ["../pi-pocket-production/node_modules/@earendil-works/chord"],
+            "preact": ["../pi-pocket-production/node_modules/preact"],
+            "preact/hooks": ["../pi-pocket-production/node_modules/preact/hooks"]
+        }
+    },
+    "include": ["src/**/*.ts", "src/**/*.js", "service/**/*.mjs", "scripts/**/*.mjs"],
+    "exclude": ["node_modules", ".runtime", ".work", "test"]
+}

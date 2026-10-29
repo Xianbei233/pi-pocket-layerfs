@@ -1,0 +1,48 @@
+{
+    "repo": "Ephemeral-AI-Lab/layerfs",
+    "tag": "v1.0.0",
+    "commit": "2aaf2552ce21154928b9f9c83582e41a637f5910",
+    "version": "1.0.0",
+    "publishedAt": "2026-10-21T11:21:25Z",
+    "license": "MIT",
+    "source": "https://github.com/Ephemeral-AI-Lab/layerfs",
+    "archive": {
+        "url": "https://codeload.github.com/Ephemeral-AI-Lab/layerfs/tar.gz/2aaf2552ce21154928b9f9c83582e41a637f5910",
+        "sha256": "4a825aced0574358857f14abfc9c553e4f0f3cf88914de8956ac4107692535a7",
+        "bytes": 2574626347
+    },
+    "verifiedAt": "2026-10-22",
+    "knownLaterHead": {
+        "commit": "5fb68ddc1acc3163e3ac3486133bde014c5fbed3",
+        "date": "2026-10-21T14:02:56Z",
+        "note": "main is 17 commits ahead; it contains DSH host volume/write access, shared stateDir bindings, and daemon handshake/benchmark/readme changes. It has no new Pi Pocket integration. This project stays on v1.0.0."
+    },
+    "notes": [
+        "Store calls run in the Node process. No Sandbox, Docker, or FUSE is needed for project/fs/branch.",
+        "The Store is the Disposable profile: no crash or power-loss durability.",
+        "project.init captures the whole source tree, ignored files included; this project stages only an explicit synthetic or owner-approved source path.",
+        "The public SDK has no layer listing. main is a line of Layers; commit history is per Branch.",
+        "README says LayerFS x Pi is planned. There is no official Pi Pocket adapter."
+    ],
+    "files": {
+        "sdk/js/package.json": "e27ce8a21587b4fa9fecb643f2f6850e26e59b50ba5d5a9a03ce47cad8ebaafb",
+        "sdk/js/src/index.js": "e2370efef3f22fa653f250578b6a78a7b7a6ecfd59bd945ee6eb2249eb99d153",
+        "core/Cargo.lock": "af9b5c8aec2d2bbfbfb6216cd8c7839d80b95bea1669df03c69e0a3f318a84a6"
+    },
+    "treeSha256": "140ff89d98af53e00fca2e8435ca7ec74c65b769c6f29bbf2170303c174c4abb",
+    "treeSha256Method": "sha256 over sorted relative paths, type byte, size, and file bytes; symlinks by link target; root .git excluded",
+    "sdk": {
+        "path": "sdk/js",
+        "exclude": ["native"],
+        "treeSha256": "af80d71aa2421c9e63b1bde49788cd968d5bc677f8702c1ba57991e238d6d11e",
+        "treeSha256Method": "sha256 over sorted relative paths, type byte, size, file bytes, and link targets; native/ (Rust sources, not imported) excluded"
+    },
+    "nativeBuilds": [
+        {
+            "sha256": "63d366056b8c370583bddd4dba34fc186fd5a6cc3c2fe4e1c436a7c7221468a7",
+            "platform": "linux",
+            "arch": "x64",
+            "note": "Reviewed local release build of native/layerfs.node from the pinned v1.0.0 source tree; recorded in docs/NATIVE-E2E.md. Other toolchains must be recorded with setup --authorize-native after review."
+        }
+    ]
+}

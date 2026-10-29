@@ -1,0 +1,47 @@
+{
+    "version": 1,
+    "ownerPersonIds": ["replace-with-the-owner-person-id"],
+    "service": {
+        "runtimeDir": "/absolute/private/runtime",
+        "socketPath": "/absolute/private/runtime/service.sock",
+        "tokenFile": "/absolute/private/runtime/service.token",
+        "layerfsHome": "/absolute/private/layerfs-home",
+        "sdkPath": "/absolute/private/sdk",
+        "requestTimeoutMs": 8000,
+        "maxResponseBytes": 524288,
+        "maxQueue": 16,
+        "concurrency": 1,
+        "upstreamVersion": "1.0.0",
+        "upstreamCommit": "2aaf2552ce21154928b9f9c83582e41a637f5910"
+    },
+    "tools": {
+        "enabled": false,
+        "maxBytes": 32768
+    },
+    "write": {
+        "enabled": false,
+        "ticketTtlMs": 120000
+    },
+    "projects": [
+        {
+            "id": "synthetic",
+            "label": "Synthetic",
+            "storePath": "/absolute/private/store/synthetic/store.sqlite",
+            "branches": ["main", "work"],
+            "origin": "demo"
+        }
+    ],
+    "sessionGrants": [
+        {
+            "conversationId": "replace-with-a-real-pocket-conversation-id",
+            "project": "synthetic",
+            "allowTools": false,
+            "toolBranches": [],
+            "fork": {
+                "enabled": false,
+                "sources": [],
+                "namePrefix": "recovery-"
+            }
+        }
+    ]
+}

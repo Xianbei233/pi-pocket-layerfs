@@ -1,0 +1,297 @@
+/* LayerFS page. Uses the app's theme tokens and classes; no external assets. */
+.layerfs {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px;
+    color: var(--text);
+    min-width: 0;
+}
+
+.layerfs-head,
+.layerfs-controls,
+.layerfs-file-head,
+.layerfs-commit-row,
+.layerfs-head-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.layerfs-head,
+.layerfs-file-head {
+    justify-content: space-between;
+}
+
+.layerfs-title {
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+.layerfs-subtitle {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.layerfs-head-actions {
+    margin-left: auto;
+}
+
+.layerfs-badge {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 2px 9px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.layerfs-badge.ok {
+    color: var(--ok);
+    border-color: var(--ok);
+}
+
+.layerfs-badge.err {
+    color: var(--err);
+    border-color: var(--err);
+}
+
+.layerfs-controls {
+    gap: 12px;
+}
+
+.layerfs-controls .setting {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.layerfs-select,
+.layerfs-input {
+    min-height: 34px;
+    padding: 4px 8px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--card);
+    color: var(--text);
+    max-width: 240px;
+}
+
+.layerfs-input {
+    min-width: 180px;
+}
+
+.layerfs-ref {
+    overflow-wrap: anywhere;
+}
+
+.layerfs-tabs {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    border-bottom: 1px solid var(--line);
+}
+
+.layerfs-tab {
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    padding: 8px 10px;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.layerfs-tab.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.layerfs-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.layerfs-list,
+.layerfs-blame,
+.layerfs-diff {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.layerfs-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 8px 10px;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    background: var(--card);
+    color: var(--text);
+    text-align: left;
+    cursor: pointer;
+    min-width: 0;
+}
+
+.layerfs-row:last-child {
+    border-bottom: 0;
+}
+
+.layerfs-row:hover {
+    background: color-mix(in srgb, var(--accent) 8%, var(--card));
+}
+
+.layerfs-kind {
+    flex: 0 0 auto;
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    width: 2.4em;
+}
+
+.layerfs-path {
+    overflow-wrap: anywhere;
+}
+
+.layerfs-crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+}
+
+.layerfs-link {
+    border: 0;
+    background: transparent;
+    color: var(--accent);
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+    text-align: left;
+}
+
+.layerfs-code {
+    margin: 0;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--bg);
+    color: var(--text);
+    overflow: auto;
+    max-height: 70vh;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    white-space: pre;
+}
+
+.layerfs-commit-row {
+    padding: 9px 10px;
+    border-bottom: 1px solid var(--line);
+    background: var(--card);
+    align-items: flex-start;
+}
+
+.layerfs-commit-row:last-child {
+    border-bottom: 0;
+}
+
+.layerfs-commit-main {
+    flex: 1 1 240px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.layerfs-blame-row {
+    display: grid;
+    grid-template-columns: 3.2em 6.2em minmax(0, 1fr);
+    gap: 8px;
+    padding: 5px 9px;
+    border-bottom: 1px solid var(--line);
+    background: var(--card);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.8rem;
+}
+
+.layerfs-blame-row:last-child {
+    border-bottom: 0;
+}
+
+.layerfs-blame-text {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.layerfs-blame-msg {
+    grid-column: 2 / -1;
+    overflow-wrap: anywhere;
+}
+
+.layerfs-diff-item {
+    border-bottom: 1px solid var(--line);
+    background: var(--card);
+    padding: 6px 10px;
+}
+
+.layerfs-diff-item:last-child {
+    border-bottom: 0;
+}
+
+.layerfs-diff-item summary {
+    cursor: pointer;
+    overflow-wrap: anywhere;
+}
+
+.layerfs-diff-item .layerfs-code {
+    margin-top: 8px;
+    max-height: 45vh;
+}
+
+.layerfs-write {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px;
+    background: var(--card);
+}
+
+.layerfs-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid var(--warn);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 699px) {
+    .layerfs {
+        padding: 12px;
+    }
+
+    .layerfs-head-actions {
+        margin-left: 0;
+    }
+
+    .layerfs-select,
+    .layerfs-input {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .layerfs-controls .setting {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .layerfs-blame-row {
+        grid-template-columns: 3em 5.2em minmax(0, 1fr);
+    }
+}
